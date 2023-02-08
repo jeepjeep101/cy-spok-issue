@@ -1,0 +1,37 @@
+{
+  "name": "central-payment-qa-automation",
+  "version": "1.0.0",
+  "description": "Central Payment Test Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeffrey Del Socorro",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.3.0",
+    "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cy-spok": "^1.5.2",
+    "cypress-plugin-api": "^2.9.0",
+    "random-words": "^1.2.1",
+    "util": "^0.12.5"
+  },
+  "cypress-cucumber-preprocessor": {
+    "commonPath": "cypress/integration/stepDefinitions/common",
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/stepDefinitions/*.js",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    },
+    "cy-spok": {
+      "child_process": false
+    }
+  }
+}
